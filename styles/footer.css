@@ -1,0 +1,27 @@
+/* Footer Section */
+#footer{
+    /* border: 1px solid red; */
+
+    width: 100%;
+
+    bottom: 0px;
+
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+#footer > div{
+    /* border: 1px solid yellow; */
+
+    width: 60%;
+    margin: auto;
+    font-size: 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer > div:nth-child(2){
+    width: 40%;
+    color: grey;
+}
