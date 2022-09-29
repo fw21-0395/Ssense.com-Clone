@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="./Styles/navbar.css" />
     <link rel="stylesheet" href="./Styles/footer.css" />
+    <link rel="stylesheet" href="./Styles/cart.css" />
+
 
 </head>
 <body>
@@ -41,6 +43,68 @@
         </div>
     </div>
 
+    <!-- Bag Section -->
+    <div id="Container">
+
+        <div id="left">
+            <div>Shopping Bag</div>
+
+            <div id="title">
+
+                <div>
+                    <span>ITEM</span>
+                </div>
+                <div>
+                    <span>TOTAL</span>
+                </div>
+        
+            </div>
+            <hr>
+
+            <div id="items">
+
+            </div>
+
+            <div id="total">
+
+                <div id="price">
+                    <p>Total</p>
+                    <p id="displayPrice1" ></p>
+                </div>
+
+                <div id="shipping">
+                    <p>Shipping estimate</p>
+                    <p>Calculated at Checkout</p>
+                </div>
+
+                <div id="finalTotal">
+
+                    <h5>Order Total</h5>
+
+                    <h5 id="displayPrice2"></h5>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div id="right">
+            <div class="checkout">
+                <h1>Checkout</h1>
+            </div>
+
+            <p>Enter your email to login or continue to checkout as a guest.</p>
+
+            <label for="">Email Address</label><br>
+            <input type="email"> <br>
+
+            <button>Proceed to Checkout</button>
+        </div>
+
+    </div>
+
     <!-- Footer Section -->
     <div id="footer">
         <div>
@@ -66,3 +130,5 @@
     
 </body>
 </html>
+
+<script src="./scripts/cart.js"></script>
