@@ -1,7 +1,8 @@
-let bagData = JSON.parse(localStorage.getItem("bag"));
+let bagData = JSON.parse(localStorage.getItem("Wishlist"));
 
 let bagTotalCount = JSON.parse(localStorage.getItem("ItemsCount")) || 0;
 let WishlistTotalCount = JSON.parse(localStorage.getItem("wishlistCount")) || 0;
+
 
 DisplayBag(bagData);
 
@@ -64,10 +65,10 @@ function DisplayBag(bagData){
                 details_bottom.setAttribute("class","details_bottom");
 
                     let detail_wishlist = document.createElement("p");
-                    detail_wishlist.innerText = "Move to Wishlist";
+                    detail_wishlist.innerText = "Move to Bag";
                     detail_wishlist.setAttribute("class","detail_wishlist");
                     detail_wishlist.addEventListener("click",function(){
-                        toWishlist(el,ind);
+                        addToBag(el,ind);
                     })
 
                     details_bottom.append(detail_wishlist);
@@ -102,13 +103,7 @@ function DisplayBag(bagData){
         
     })
 
-    let totalPrice = bagData.reduce(function (acc,el){
-        return acc+(Number(el.price));
-    },0);
 
-
-    document.querySelector("#displayPrice1").innerText ="$"+totalPrice+" USD";
-    document.querySelector("#displayPrice2").innerText ="$"+totalPrice+" USD";
     document.querySelector("#bagCount").innerText = bagTotalCount;
     document.querySelector("#wishlistCount").innerText = WishlistTotalCount;
 
@@ -118,39 +113,41 @@ function DisplayBag(bagData){
 
 function removeFun(el,ind){
 
-    bagTotalCount--;
+    WishlistTotalCount--;
 
-    localStorage.setItem("ItemsCount",JSON.stringify(bagTotalCount));
+    localStorage.setItem("wishlistCount",JSON.stringify(WishlistTotalCount));
     
     bagData.splice(ind,1);
 
-    localStorage.setItem("bag",JSON.stringify(bagData));
+    localStorage.setItem("Wishlist",JSON.stringify(bagData));
     
     DisplayBag(bagData);
 
     window.location.reload();
 }
 
-let wishlistArr = JSON.parse(localStorage.getItem("Wishlist")) || [];
+let bagArr = JSON.parse(localStorage.getItem("bag")) || [];
 
-function toWishlist(el,ind){
+    function addToBag(el,ind){
 
-    WishlistTotalCount++;
+        WishlistTotalCount--;
 
     localStorage.setItem("wishlistCount",JSON.stringify(WishlistTotalCount));
 
-    bagTotalCount--;
+        bagArr.push(el);
 
-    localStorage.setItem("ItemsCount",JSON.stringify(bagTotalCount));
+        bagTotalCount++;
 
-    bagData.splice(ind,1);
+        localStorage.setItem("ItemsCount",JSON.stringify(bagTotalCount));
 
-    localStorage.setItem("bag",JSON.stringify(bagData));
+        localStorage.setItem("bag",JSON.stringify(bagArr));
 
-    wishlistArr.push(el);
+        bagData.splice(ind,1);
 
-    localStorage.setItem("Wishlist",JSON.stringify(wishlistArr));
+        localStorage.setItem("Wishlist",JSON.stringify(bagData));
 
-    window.location.reload();
-}
+        DisplayBag(bagData);
+
+        window.location.reload();
+    }
 
