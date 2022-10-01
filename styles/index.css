@@ -9,16 +9,21 @@
 #Top > div:nth-child(1) {
     /* border: 1px solid red; */
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     justify-content:center;
     gap: 60px;
+
+    padding-left: 100px;
+    padding-right: 100px;
+
     
 }
 
 #Top > div:nth-child(1) > div {
     /* border: 2px solid yellow; */
 
-    width: 35%;
+    width: auto;
 }
 
 #Top > div:nth-child(1) div > img{
@@ -40,15 +45,20 @@
 #Top > div:nth-child(2){
     /* border: 1px solid red; */
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     justify-content:center;
     gap: 40px;
+
+    padding-left: 50px;
+    padding-right: 50px;
+
 }
 
 #Top > div:nth-child(2) > div {
     /* border: 2px solid yellow; */
 
-    width: 25%;
+    width: auto;
 }
 
 #Top > div:nth-child(2) div > img{
@@ -77,15 +87,20 @@
 #Top > div:nth-child(3){
     /* border: 1px solid red; */
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     justify-content:center;
     gap: 40px;
+
+    padding-left: 100px;
+    padding-right: 100px;
+
 }
 
 #Top > div:nth-child(3) > div {
     /* border: 2px solid yellow; */
 
-    width: 40%;
+    width: auto;
 }
 
 #Top > div:nth-child(3) div > img{
@@ -501,6 +516,38 @@
     margin-top: 0px;
 }
 
+
+/* meidum screens */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    body {
+      background-color: pink;
+    }
+
+    
+
+  }
+
+        /* small screens */
+  @media all and (min-width: 320px) and (max-width: 767px) {
+    body {
+      background-color: brown;
+    }
+
+    #Top > div:nth-child(1) {
+
+        grid-template-columns: repeat(1,1fr);   
+    }
+
+    #Top > div:nth-child(2){
+       
+        grid-template-columns: repeat(1,1fr); 
+    }
+
+    #Top > div:nth-child(3){
+
+        grid-template-columns: repeat(1,1fr);  
+    }
+  }
 
 
 
