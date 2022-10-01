@@ -7,6 +7,7 @@ let mensData = [
       type: "Black Ferro Coat",
       cat: "clothing",
       color:"Black",
+      arrival: "latest"
     },
     {
       id: 2,
@@ -16,6 +17,7 @@ let mensData = [
       type: " Navy Kersey Pleats Coat",
       cat: "clothing",
       color:"Navy",
+      trending: "Yes",
     },
     {
       id: 3,
@@ -35,7 +37,7 @@ let mensData = [
       type: "Black Basics Caot",
       cat: "clothing",
       color:"Black",
-
+      arrival: "latest"
     },
     {
         id: 5,
@@ -45,6 +47,7 @@ let mensData = [
         type: "Blue Sporty B Tracksuit Jacket",
         cat: "clothing",
         color:"Blue",
+        trending: "Yes",
 
       },
       {
@@ -65,6 +68,7 @@ let mensData = [
         type: "Taupe 3B Embroidered Sweatshirt",
         cat: "clothing",
         color:"Taupe",
+        arrival: "latest"
       },
       {
         id: 8,
@@ -74,6 +78,7 @@ let mensData = [
         type: "Black Zip Hoodie",
         cat: "clothing",
         color:"Black",
+        trending: "Yes",
       },
       {
         id: 9,
@@ -101,6 +106,7 @@ let mensData = [
         type: "Black Wide-Leg Trousers",
         cat: "clothing",
         color:"Black",
+        trending: "Yes",
       },
       {
         id: 12,
@@ -118,6 +124,7 @@ let mensData = [
         type: "Blue Monthly Color September Trousers",
         cat: "clothing",
         color:"Blue",
+        arrival: "latest"
       },
       {
         id: 14,
@@ -127,6 +134,7 @@ let mensData = [
         type: "Green Loose Fit Cargo Pants",
         cat: "clothing",
         color:"Green",
+        trending: "Yes",
       },
       {
         id: 15,
@@ -136,6 +144,7 @@ let mensData = [
         type: "Green Kersey Pleats Trousers",
         cat: "clothing",
         color:"Green",
+        arrival: "latest"
       },
       {
         id: 16,
@@ -145,6 +154,7 @@ let mensData = [
         type: "Brown Loose Fit Cargo Pants",
         cat: "clothing",
         color:"Brown",
+        arrival: "latest"
       },
       {
         id: 17,
@@ -154,6 +164,7 @@ let mensData = [
         type: "Black Arc Backpack",
         cat: "bag",
         color:"Black",
+        trending: "Yes",
       },
       {
         id: 18,
@@ -163,6 +174,7 @@ let mensData = [
         type: "Orange Arc Backpack",
         cat: "bag",
         color:"Orange",
+        arrival: "latest"
       },
       {
         id: 19,
@@ -181,6 +193,7 @@ let mensData = [
         type: "Black Nylon & Calfskin Backpack",
         cat: "bag",
         color:"Black",
+        trending: "Yes",
       },
       {
         id: 21,
@@ -199,6 +212,7 @@ let mensData = [
         type: "Black Trooper Chelsea Boots",
         cat: "shoes",
         color:"Black",
+        trending: "Yes",
       },
       {
         id: 23,
@@ -208,6 +222,7 @@ let mensData = [
         type: "Orange Gomme Gommelone Lace-Up Boots",
         cat: "shoes",
         color:"Orange",
+        arrival: "latest"
       },
       {
         id: 24,
@@ -217,6 +232,7 @@ let mensData = [
         type: "Silver Type 165 Boots",
         cat: "shoes",
         color:"Silver",
+        trending: "Yes",
       },
       {
         id: 25,
@@ -235,6 +251,7 @@ let mensData = [
         type: "Silver Pearl Earrings",
         cat: "accessories",
         color:"Silver",
+        arrival: "latest"
       },
       {
         id: 27,
@@ -244,6 +261,8 @@ let mensData = [
         type: "Gold Spike Earrings",
         cat: "accessories",
         color:"Gold",
+        trending: "Yes",
+        
       },
       {
         id: 28,
@@ -253,6 +272,8 @@ let mensData = [
         type: "Black Oakley Edition Spike Sunglasses",
         cat: "accessories",
         color:"Black",
+        arrival: "latest",
+        trending: "Yes",
       },
   ];
 
@@ -577,6 +598,62 @@ let mensData = [
   SortByAllColors.addEventListener("click",byAllColors);
 
   function byAllColors(){
+
+    displayMens(mensData);
+  }
+
+  // Filter by Arrival:Latest;
+  let SortByLatest = document.querySelector("#arrival");
+
+  SortByLatest.addEventListener("click",byLatest);
+
+  function byLatest(){
+
+    let newData = mensData.filter(function(el){
+      return el.arrival == "latest";
+    })
+
+    displayMens(newData);
+  }
+
+  // Filter by Trending;
+  let SortByTrending= document.querySelector("#trending");
+
+  SortByTrending.addEventListener("click",byTrending);
+
+  function byTrending(){
+
+    let newData = mensData.filter(function(el){
+      return el.trending == "Yes";
+    })
+
+    displayMens(newData);
+  }
+
+  // Sort by Price:low to high;
+  let SortByPriceLTH= document.querySelector("#LTH");
+
+  SortByPriceLTH.addEventListener("click",byLTH);
+
+  function byLTH(){
+
+    mensData.sort(function(a,b){
+        return a.price - b.price;
+    })
+
+    displayMens(mensData);
+  }
+
+  // Sort by Price:high to low;
+  let SortByPriceHTL= document.querySelector("#HTL");
+
+  SortByPriceHTL.addEventListener("click",byHTL);
+
+  function byHTL(){
+
+    mensData.sort(function(a,b){
+        return b.price - a.price;
+    })
 
     displayMens(mensData);
   }
