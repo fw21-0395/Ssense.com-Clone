@@ -74,9 +74,9 @@ p:hover{
 
 /* meidum screens */
     @media all and (min-width: 768px) and (max-width: 1024px) {
-        body {
+        /* body {
         background-color: pink;
-        }
+        } */
 
         #mid{
             grid-template-columns: repeat(3,1fr);
@@ -93,9 +93,9 @@ p:hover{
 
  /* small screens */
     @media all and (min-width: 320px) and (max-width: 767px) {
-        body {
+        /* body {
           background-color: brown;
-        }
+        } */
 
         #mid{
             grid-template-columns: repeat(2,1fr);
