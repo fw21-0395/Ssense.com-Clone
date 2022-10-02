@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Bag | SSENSE</title>
+    <title>CHECKOUT | SSENSE</title>
 
     <link rel="stylesheet" href="./Styles/navbar.css" />
     <link rel="stylesheet" href="./Styles/footer.css" />
     <link rel="stylesheet" href="./Styles/cart.css" />
+    <link rel="stylesheet" href="./Styles/checkout.css" />
+
 
 
 </head>
@@ -47,6 +49,53 @@
 
     <!-- Bag Section -->
     <div id="Container">
+
+        <div id="right">
+            
+            <form action="">
+                <p>Checkout</p>
+
+                <label for="">Shipping Address</label>
+                <hr>
+
+                <label for="">First Name</label> <br>
+                <input type="text" id="nameF" required > <br>
+
+                <label for="" >Last Name</label> <br>
+                <input type="text" id="nameL" required> <br>
+
+                <label for="" >Street Address</label> <br>
+                <input type="text" id="address" required> <br>
+
+                <label for="">City</label> <br>
+                <input type="text" id="city" required> <br>
+
+                <label for="">Pincode</label> <br>
+                <input type="number" id="pincode" required> <br>
+
+                <label for="">Mobile Number</label> <br>
+                <input type="number" id="phn" required> <br>
+
+                <p>Card Details</p>
+                <hr>
+
+                <label for="">Card Holder Name</label> <br>
+                <input type="text" id="cardName" required> <br>
+
+                <label for="">Card Number</label> <br>
+                <input type="number" id="cardNum" required> <br>
+
+                <label for="">Expiration Date</label> <br>
+                <input type="date" id="cardDate" required> <br>
+
+                <label for="">Cvv</label> <br>
+                <input type="number" id="cvv" required> <br>
+
+                <input id="submit" type="submit" value="Place Order">
+
+            </form>
+            
+        </div>
 
         <div id="left">
             <div>Shopping Bag</div>
@@ -92,18 +141,7 @@
 
         </div>
 
-        <div id="right">
-            <div class="checkout">
-                <h1>Checkout</h1>
-            </div>
-
-            <!-- <p>Enter your email to login or continue to checkout as a guest.</p>
-
-            <label for="">Email Address</label><br>
-            <input type="email"> <br> -->
-
-            <button id="checkout">Proceed to Checkout</button>
-        </div>
+       
 
     </div>
 
@@ -134,3 +172,4 @@
 </html>
 
 <script src="./scripts/cart.js"></script>
+<script src="./scripts/checkout.js"></script>

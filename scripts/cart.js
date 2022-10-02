@@ -1,4 +1,4 @@
-let bagData = JSON.parse(localStorage.getItem("bag"));
+let bagData = JSON.parse(localStorage.getItem("bag")) || [];
 
 let bagTotalCount = JSON.parse(localStorage.getItem("ItemsCount")) || 0;
 let WishlistTotalCount = JSON.parse(localStorage.getItem("wishlistCount")) || 0;
@@ -153,4 +153,12 @@ function toWishlist(el,ind){
 
     window.location.reload();
 }
+
+let check = document.querySelector("#checkout");
+
+check.addEventListener("click" , myFun);
+
+function myFun(){
+    window.location.href="checkout.html";
+};
 

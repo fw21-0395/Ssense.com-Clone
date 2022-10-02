@@ -1,0 +1,29 @@
+form{
+    /* border: 2px solid green; */
+}
+
+input{
+    width: 95%;
+    font-size: 12px;
+    border: 1px solid gray;
+
+    border-radius: 0px;
+    margin-bottom: 10px;
+
+    padding: 10px;
+
+}
+
+label{
+    font-size: 12px;
+}
+
+#submit{
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid black;
+
+    background-color: black;
+    color: white;
+}

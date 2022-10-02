@@ -13,7 +13,9 @@
     width: 15%;
     /* height: 500px; */
     font-size: 12px;
-    line-height: 5px;
+    line-height: 10px;
+
+    padding-left: 10px;
 }
 
 #Designers{
@@ -65,3 +67,47 @@ line-height: 3px;
     background-color: black;
     border: 1px solid black;
 }
+
+p:hover{
+    cursor: pointer;
+}
+
+/* meidum screens */
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+        body {
+        background-color: pink;
+        }
+
+        #mid{
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        #left{
+            line-height: 20px;
+        }
+
+        #right{
+            line-height: 20px;
+        }
+    }
+
+ /* small screens */
+    @media all and (min-width: 320px) and (max-width: 767px) {
+        body {
+          background-color: brown;
+        }
+
+        #mid{
+            grid-template-columns: repeat(2,1fr);
+            line-height: 50px;
+        }
+
+        #left{
+            line-height: 20px;
+        }
+
+        #right{
+            line-height: 20px;
+        }
+
+    }

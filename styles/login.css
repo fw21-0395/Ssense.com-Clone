@@ -1,0 +1,42 @@
+#Container{
+    /* border: 2px solid green; */
+    /* background-color: yellow; */
+}
+
+    #loginDiv{
+        /* border: 2px solid red; */
+        width: 30%;
+    }
+
+    form{
+    /* border: 2px solid green; */
+    padding: 40px;
+
+    }
+
+    form > input {
+        width: 100%;
+        margin-bottom: 20px;
+
+        font-size: 15px;
+
+        border: 1px solid black;
+        border-radius: 0px;
+
+        padding: 10px;
+    }
+
+     form > label{
+        font-size: 15px;
+    }
+
+    #Login{
+        background-color: black;
+        color: white;
+        width: 107%;
+    }
+
+    #Login + p ~ p {
+        font-size: 12px;
+    }
+
