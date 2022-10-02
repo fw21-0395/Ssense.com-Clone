@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist | SSENSE</title>
+    <title>LOGIN | SSENSE</title>
 
     <link rel="stylesheet" href="./Styles/navbar.css" />
     <link rel="stylesheet" href="./Styles/footer.css" />
     <link rel="stylesheet" href="./Styles/cart.css" />
+    <link rel="stylesheet" href="./Styles/login.css" />
+
 
 
 </head>
@@ -47,39 +49,24 @@
     <!-- Bag Section -->
     <div id="Container">
 
-        <div id="left">
-            <div>Wishlist</div>
+       <div id="loginDiv">
 
-            <div id="title">
+        <form>
+            
+            <p>Login</p> <br>
+            
+            <label for="">Email Address</label> <br>
+            <input id="LoginEmail" type="email" required> <br>
 
-                <div>
-                    <span>ITEM</span>
-                </div>
-                <div>
-                    <span>PRICE</span>
-                </div>
-        
-            </div>
-            <hr>
+            <label for="">Password</label> <br>
+            <input id="LoginPass" type="password" required> <br>
 
-            <div id="items">
+            <input id="Login" type="submit" value="Login">
 
-            </div>
-
-        </div>
-
-        <div id="right">
-            <div class="checkout">
-                <h1>Checkout</h1>
-            </div>
-
-            <!-- <p>Enter your email to login or continue to checkout as a guest.</p>
-
-            <label for="">Email Address</label><br>
-            <input type="email"> <br> -->
-
-            <button id="checkout">Proceed to Checkout</button>
-        </div>
+            <p>Don't have an account? <a href="signup.html"> Sign Up</a></p>
+            
+           </form>
+       </div>
 
     </div>
 
@@ -109,4 +96,4 @@
 </body>
 </html>
 
-<script src="./scripts/wishlist.js"></script>
+<script src="./scripts/login.js"></script>

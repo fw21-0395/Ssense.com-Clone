@@ -281,15 +281,20 @@
 
     margin-top: 50px;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     justify-content:center;
     gap: 40px;
+
+    padding-left: 100px;
+    padding-right: 100px;
+
 }
 
 #Mid_part_3 > div {
     /* border: 2px solid yellow; */
 
-    width: 40%;
+    width: auto;
 }
 
 #Mid_part_3 > div > img{
@@ -356,15 +361,19 @@
     margin-top: 40px;
     /* border: 1px solid red; */
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content:center;
     gap: 40px;
+
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #Bottom_part_2 > div {
     /* border: 2px solid yellow; */
 
-    width: 30%;
+    width: auto;
 }
 
 #Bottom_part_2 div > img{
@@ -443,15 +452,19 @@
 
     margin-top: 50px;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     justify-content:center;
     gap: 40px;
+
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 #Bottom_part_4 > div {
     /* border: 2px solid yellow; */
 
-    width: 40%;
+    width: auto;
 }
 
 #Bottom_part_4 > div > img{
@@ -484,15 +497,19 @@
     margin-top: 40px;
     /* border: 1px solid red; */
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     justify-content:center;
     gap: 40px;
+
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #Bottom_part_5 > div {
     /* border: 2px solid yellow; */
 
-    width: 30%;
+    width: auto;
 }
 
 #Bottom_part_5 div > img{
@@ -517,21 +534,18 @@
 }
 
 
-/* meidum screens */
+/* meidum screens
 @media all and (min-width: 768px) and (max-width: 1024px) {
     body {
       background-color: pink;
     }
-
-    
-
-  }
+  } */
 
         /* small screens */
   @media all and (min-width: 320px) and (max-width: 767px) {
-    body {
+    /* body {
       background-color: brown;
-    }
+    } */
 
     #Top > div:nth-child(1) {
 
@@ -546,6 +560,26 @@
     #Top > div:nth-child(3){
 
         grid-template-columns: repeat(1,1fr);  
+    }
+
+    #Mid_part_3 {
+        
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    #Bottom_part_2{
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #Bottom_part_4 {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #Bottom_part_5 {
+
+        grid-template-columns: repeat(1, 1fr);
     }
   }
 
