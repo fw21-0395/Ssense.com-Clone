@@ -1,4 +1,4 @@
-Ssense.com || Clone
+<h1>Ssense.com || Clone</h1>
 
 This is a clone of the popular e-commerce website Ssense.com. The website deals with products like bags, clothes, accessories, etc. and offers features like sorting by price, trend, colors, etc. The project was completed in just 4 days and was developed entirely by a solo developer.
 
