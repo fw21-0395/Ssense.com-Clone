@@ -24,3 +24,10 @@ To get started with the project, simply clone the repository to your local machi
 Conclusion
 
 Overall, this project is a great example of what can be accomplished with HTML, CSS, and JavaScript in just a few days. It offers several key features that users expect from e-commerce websites and provides a solid foundation for further development and customization. Whether you're a developer looking to learn new skills or simply a fan of Ssense.com, this project is definitely worth checking out!
+
+
+<h2>Video Presentation:</h2>
+Link: https://drive.google.com/file/d/1e07_YTgtKcKoErGPuWvlNaXyWOiaF5Gv/view?usp=sharing
+
+<h2>Deployement Link:</h2>
+Link: https://dapper-narwhal-4f00c1.netlify.app/
